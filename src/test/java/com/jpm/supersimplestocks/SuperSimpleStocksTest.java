@@ -9,9 +9,16 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-
+/**
+ * The type Super simple stocks test.
+ */
 public class SuperSimpleStocksTest extends TestCase {
 
+    /**
+     * Test calculate dividend yield.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testCalculateDividendYield() throws Exception {
 
@@ -35,6 +42,11 @@ public class SuperSimpleStocksTest extends TestCase {
         assertEquals(13.0, dividendYeeldResult);
     }
 
+    /**
+     * Test calculate pE ratio.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testCalculatePERatio() throws Exception {
         SuperSimpleStocksComputations stock = new SuperSimpleStocksComputations();
@@ -44,6 +56,11 @@ public class SuperSimpleStocksTest extends TestCase {
         assertEquals(0.125, peRatioResult);
     }
 
+    /**
+     * Test trade calculate volume weighted stock price in time.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testTradeCalculateVolumeWeightedStockPriceInTime() throws Exception {
 
@@ -69,6 +86,11 @@ public class SuperSimpleStocksTest extends TestCase {
         assertEquals(0,stock.getTradeListInTime(tradeList, 15).size());
     }
 
+    /**
+     * Test record trade.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testRecordTrade() throws Exception {
 
@@ -91,6 +113,11 @@ public class SuperSimpleStocksTest extends TestCase {
         assertEquals(expectedString,trade.toString());
     }
 
+    /**
+     * Test stock price.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testStockPrice() throws Exception {
 
@@ -114,7 +141,11 @@ public class SuperSimpleStocksTest extends TestCase {
         assertEquals(expectedResult,actualResult);
     }
 
-
+    /**
+     * Test GBCE all share index.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testGBCEAllShareIndex() throws Exception {
 
