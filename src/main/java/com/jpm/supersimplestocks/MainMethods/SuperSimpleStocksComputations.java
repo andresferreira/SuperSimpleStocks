@@ -37,10 +37,11 @@ public class SuperSimpleStocksComputations implements SuperSimpleStocksInterface
             if(stock == null)
                 throw new Exception("Stock is null");
 
-            if (marketPrice > 0.0) {            // Preferred
+            if (marketPrice > 0.0) {
                 if (stock.getStockType().equals(STOCK_TYPE_COMMON)) {
                     dividendYeld = stock.getLastDividend() / marketPrice;
                 } else {
+                    // Preferred stock type
                     dividendYeld = stock.getFixedDividend() * stock.getParValue() / marketPrice;
                 }
             } else  {
